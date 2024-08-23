@@ -10,8 +10,14 @@ import { useState } from "react";
 import { EXAMPLES, CORE_CONCEPTS } from "./data.js";
 
 export default function App() {
-  const [selectedTopic, setselectedTopic] = useState(null);
+  const [selectedTopic, setselectedTopic] = useState('components');
 
+
+  function handleSelect(selectedButton){
+    // selectedButton => 'components' , 'jsx', 'props', 'state'
+    setselectedTopic(selectedButton);
+   console.log(selectedTopic);
+  }
   let tabContent = <p>Please select a topic.</p>;
 
   if (selectedTopic) {
@@ -84,6 +90,39 @@ export default function App() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Reacting to Events
 
